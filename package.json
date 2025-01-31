@@ -1,5 +1,5 @@
 {
-  "name": "bustling-bar",
+  "name": "checkout-flow",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^8.0.5",
     "@checkout.com/checkout-web-components": "^0.6.0-beta",
     "astro": "^5.1.10"
   },
