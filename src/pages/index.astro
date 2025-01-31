@@ -1,0 +1,164 @@
+---
+import Welcome from '../components/Checkout.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="checkout-container">
+		<div class="checkout-card">
+			<div class="order-summary">
+				<h1>Checkout</h1>
+				
+				<div class="product">
+					<img src="/t-shirt-image.png" alt="Black T-Shirt" />
+					<div class="product-details">
+						<h2>Premium White T-Shirt</h2>
+						<p class="description">100% Cotton, Unisex Design</p>
+						<div class="price-quantity">
+							<span class="quantity">1x</span>
+							<span class="price">$29.99</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="total">
+					<div class="subtotal">
+						<span>Subtotal</span>
+						<span>£29.99</span>
+					</div>
+					<div class="shipping">
+						<span>Shipping</span>
+						<span>Free</span>
+					</div>
+					<div class="final-total">
+						<span>Total</span>
+						<span>£29.99</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="payment-section">
+				<Welcome />
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=PT+Sans&display=swap');
+
+	.checkout-container {
+		min-height: 100vh;
+		background-color: #0A0A0C;
+		display: grid;
+		place-items: center;
+		padding: 2rem;
+		font-family: 'Roboto Mono', monospace;
+	}
+
+	.checkout-card {
+		background-color: #1F1F1F;
+		border-radius: 8px;
+		padding: 2rem;
+		width: 100%;
+		max-width: 800px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+		border: 1px solid #68686C;
+	}
+
+	h1 {
+		color: #F9F9FB;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: 0;
+		margin-bottom: 2rem;
+	}
+
+	.product {
+		display: flex;
+		gap: 1.5rem;
+		padding: 1.5rem;
+		background-color: #1F1F1F;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+		border: 1px solid #68686C;
+	}
+
+	.product img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	.product-details h2 {
+		color: #F9F9FB;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		margin-bottom: 0.5rem;
+	}
+
+	.description {
+		color: #828388;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+	}
+
+	.price-quantity {
+		margin-top: 1rem;
+		color: #F9F9FB;
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	.total {
+		color: #F9F9FB;
+		padding: 1.5rem;
+		background-color: #1F1F1F;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+		border: 1px solid #68686C;
+	}
+
+	.total > div {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.5rem;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.final-total {
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid #68686C;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.payment-section {
+		margin-top: 2rem;
+		padding-top: 2rem;
+		border-top: 1px solid #68686C;
+	}
+
+	@media (max-width: 768px) {
+		.checkout-card {
+			padding: 1rem;
+		}
+
+		.product {
+			flex-direction: column;
+		}
+
+		.product img {
+			width: 100%;
+			height: 200px;
+		}
+	}
+</style>
