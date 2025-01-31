@@ -1,48 +1,87 @@
-# Astro Starter Kit: Basics
+# Checkout Flow
 
-```sh
-npm create astro@latest -- --template basics
-```
+A modern, secure payment processing implementation using Astro and Checkout.com's Web Components.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🛠️ Tech Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Framework**: [Astro](https://astro.build)
+- **Payment Processing**: [Checkout.com Flow Web Component](https://www.checkout.com/docs/payments/accept-payments/accept-a-payment-on-your-website)
+- **Styling**: Native CSS with modern features
+- **Environment**: Server-side rendered with client islands
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 🏗️ Project Structure
 
 ```text
 /
-├── public/
-│   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   ├── Checkout.astro       # Main payment flow component
+│   │   ├── Appearance.astro     # Checkout styling configuration
+│   │   └── Failure.astro        # Payment failure handling
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   └── Layout.astro         # Base layout wrapper
 │   └── pages/
-│       └── index.astro
-└── package.json
+│       ├── index.astro          # Entry point
+│       ├── success.astro        # Success page with payment details
+│       ├── failure.astro        # Failure page with error details
+│       └── create-payment-session.ts # Backend payment session endpoint
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## ⚡ Features
 
-## 🧞 Commands
+Secure payment processing
+Real-time payment validation
+Detailed success/failure flows
+Responsive design
+Error handling and user feedback
+3DS support
+Multiple payment method support
 
-All commands are run from the root of the project, from a terminal:
+## 🚀 Getting Started
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Clone the repository
+Install dependencies:
 
-## 👀 Want to learn more?
+```bash
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+npm install
+
+```
+
+Set up environment variables:
+
+```bash
+
+PUBLIC_KEY=your_checkout_public_key
+SECRET_KEY=your_checkout_secret_key
+SITE_URL=your_site_url
+
+```
+
+Run the development server:
+
+```bash
+
+npm run dev
+
+```
+
+## 💳 Payment Flow
+
+Customer enters payment details
+Backend creates payment session
+Checkout.com Web Components handle payment processing
+Success/Failure handling with detailed feedback
+Transaction details displayed on completion
+
+## 🔒 Security
+
+Server-side payment session creation
+Environment variable protection
+CORS handling
+Request throttling
+Secure key management
+
+## 🎨 Customization
+
+Modify Appearance.astro to customize the checkout flow styling to match your brand.
