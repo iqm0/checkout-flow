@@ -71,7 +71,7 @@ export const prerender = false;
       console.log('2. Payment session data:', data);
 
       const checkout = await CheckoutWebComponents({
-        publicKey: 'Bearer pk_sbox_dwuoyq5tj2pxyvl6dyimp5ffxib',
+        publicKey: `Bearer ${PUBLIC_KEY}`,
         environment: "sandbox",
         locale: "en-GB",
         paymentSession: data.paymentSession,
