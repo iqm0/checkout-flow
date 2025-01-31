@@ -3,7 +3,7 @@ import type { APIRoute } from "astro";
 
 export const POST: APIRoute = async ({ request }) => {
   const SECRET_KEY = import.meta.env.SECRET_KEY;
-  const SITE_URL = import.meta.env.SITE_URL || "http://localhost:4321";
+  const SITE_URL = import.meta.env.SITE_URL;
 
   try {
     const response = await fetch(

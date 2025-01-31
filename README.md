@@ -17,7 +17,6 @@ A modern, secure payment processing implementation using Astro and Checkout.com'
 │   ├── components/
 │   │   ├── Checkout.astro       # Main payment flow component
 │   │   ├── Appearance.astro     # Checkout styling configuration
-│   │   └── Failure.astro        # Payment failure handling
 │   ├── layouts/
 │   │   └── Layout.astro         # Base layout wrapper
 │   └── pages/
